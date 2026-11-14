@@ -1,4 +1,4 @@
-import Header from "@/app/components/ui/Header";
+import { Header } from "docbook-ui-package";
 import AuthShowcase from "@/app/components/auth/AuthShowcase";
 
 export default function AuthLayout({
