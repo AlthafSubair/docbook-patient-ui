@@ -16,8 +16,7 @@ import {
   Stethoscope,
 } from "lucide-react";
 
-import { Title, Desc, Button } from "docbook-ui-package";
-import { RelationshipBadge } from "@/app/components/ui/RelationshipBadge";
+import { Title, Desc, Button, RelationshipBadge } from "docbook-ui-package";
 import { getClinicById, getDoctorsByClinicId, type Doctor } from "@/lib/clinicData";
 import { usePatientStore } from "@/lib/stores/patientStore";
 import { usePatients } from "@/lib/api/patients";

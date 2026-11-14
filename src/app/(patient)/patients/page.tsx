@@ -9,8 +9,7 @@ import { usePatients, useDeletePatient } from "@/lib/api/patients";
 import { PatientsHeader } from "@/app/components/patients/PatientsHeader";
 import { PatientsList } from "@/app/components/patients/PatientsList";
 import { PatientForm } from "@/app/components/patients/PatientForm";
-import { Title, Desc, Button, LoadingState, ErrorCard, useIsMounted } from "docbook-ui-package";
-import { ConfirmModal } from "@/app/components/ui/ConfirmModal";
+import { Title, Desc, Button, LoadingState, ErrorCard, ConfirmModal, useIsMounted } from "docbook-ui-package";
 import type { PatientProfile } from "@/types/patient";
 
 export default function PatientsPage() {
