@@ -6,11 +6,10 @@ import { toast } from "sonner";
 import { useAuthStore } from "@/lib/stores/authStore";
 import { usePatientStore } from "@/lib/stores/patientStore";
 import { usePatients, useDeletePatient } from "@/lib/api/patients";
-import { useIsMounted } from "@/hooks/useIsMounted";
 import { PatientsHeader } from "@/app/components/patients/PatientsHeader";
 import { PatientsList } from "@/app/components/patients/PatientsList";
 import { PatientForm } from "@/app/components/patients/PatientForm";
-import { Title, Desc, Button, LoadingState, ErrorCard } from "docbook-ui-package";
+import { Title, Desc, Button, LoadingState, ErrorCard, useIsMounted } from "docbook-ui-package";
 import { ConfirmModal } from "@/app/components/ui/ConfirmModal";
 import type { PatientProfile } from "@/types/patient";
 
