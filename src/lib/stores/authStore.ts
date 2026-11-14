@@ -1,10 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-
-export interface AuthTokens {
-  accessToken: string;
-  refreshToken?: string;
-}
+import { logoutApi } from "../api/auth";
 
 interface AuthState {
   phone: string;
@@ -15,10 +11,10 @@ interface AuthState {
     phone: string,
     country?: string,
     national?: string,
-    tokenOrPayload?: string | AuthTokens
+    tokenOrPayload?: string | { accessToken: string }
   ) => void;
   setAccessToken: (accessToken: string) => void;
-  logout: () => void;
+  logout: () => Promise<void>;
 }
 
 export const useAuthStore = create<AuthState>()(
@@ -60,7 +56,6 @@ export const useAuthStore = create<AuthState>()(
           if (rawToken) {
             localStorage.setItem("docbook_access_token", rawToken);
           }
-          localStorage.removeItem("docbook_refresh_token");
         } catch {}
 
         set((state) => ({
@@ -78,18 +73,25 @@ export const useAuthStore = create<AuthState>()(
         set({ accessToken });
       },
 
-      logout: () => {
+      logout: async () => {
         try {
-          localStorage.removeItem("docbook_user_phone");
-          localStorage.removeItem("docbook_user_national");
-          localStorage.removeItem("docbook_access_token");
-          localStorage.removeItem("docbook_refresh_token");
-        } catch {}
-        set({
-          phone: "",
-          national: "",
-          accessToken: "",
-        });
+          // Backend revokes session and clears HttpOnly refresh cookie
+          await logoutApi();
+        } catch (e) {
+          console.warn("Backend logout request failed:", e);
+        } finally {
+          try {
+            localStorage.removeItem("docbook_user_phone");
+            localStorage.removeItem("docbook_user_national");
+            localStorage.removeItem("docbook_access_token");
+          } catch {}
+
+          set({
+            phone: "",
+            national: "",
+            accessToken: "",
+          });
+        }
       },
     }),
     {

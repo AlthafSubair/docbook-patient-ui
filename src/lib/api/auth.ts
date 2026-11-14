@@ -95,3 +95,31 @@ export async function refreshTokenApi(
   );
   return response.data;
 }
+
+export interface LogoutResponse {
+  message: string;
+}
+
+/**
+ * Revoke refresh token and log out user.
+ * Relies on the HttpOnly refresh cookie.
+ * POST /api/v1/auth/logout
+ */
+export async function logoutApi(): Promise<LogoutResponse> {
+  const response = await api.post<LogoutResponse>(
+    "/auth/logout",
+    {},
+    { withCredentials: true }
+  );
+  return response.data;
+}
+
+/**
+ * TanStack Query Mutation hook for logging out
+ */
+export function useLogout() {
+  return useMutation<LogoutResponse, ApiError, void>({
+    mutationFn: () => logoutApi(),
+  });
+}
+
