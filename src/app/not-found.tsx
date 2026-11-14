@@ -2,8 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import { ErrorState } from "@/app/components/ui/ErrorState";
-import { Button } from "docbook-ui-package";
+import { ErrorState, Button } from "docbook-ui-package";
 import { HomeButton } from "@/app/components/ui/HomeButton";
 
 export default function NotFound() {

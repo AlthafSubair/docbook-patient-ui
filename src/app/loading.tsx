@@ -1,4 +1,6 @@
-import PageLoader from "@/app/components/ui/PageLoader";
+"use client";
+
+import { PageLoader } from "docbook-ui-package";
 
 export default function Loading() {
   return <PageLoader />;
