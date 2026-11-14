@@ -4,8 +4,7 @@ import React from "react";
 import { Trash2, ChevronRight, Pencil } from "lucide-react";
 import { PatientProfile } from "@/types/patient";
 import { RelationshipBadge } from "@/app/components/ui/RelationshipBadge";
-import { SelectIndicator } from "@/app/components/ui/SelectIndicator";
-import { ActionButton } from "docbook-ui-package";
+import { ActionButton, SelectIndicator } from "docbook-ui-package";
 
 export interface ProfileCardProps {
   profile: PatientProfile;

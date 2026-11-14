@@ -3,8 +3,7 @@
 import React, { useState, useMemo } from "react";
 import { toast } from "sonner";
 import { User, Mail } from "lucide-react";
-import { Input, Button, DatePicker } from "docbook-ui-package";
-import { OptionSelector } from "@/app/components/ui/OptionSelector";
+import { Input, Button, DatePicker, OptionSelector } from "docbook-ui-package";
 import { useCreatePatient, useUpdatePatient } from "@/lib/api/patients";
 import type { PatientProfile } from "@/types/patient";
 import {

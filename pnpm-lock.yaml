@@ -1375,7 +1375,7 @@ packages:
     engines: {node: '>=8'}
 
   docbook-ui-package@file:../docbook-package-ui/docbook-ui-package-0.1.0.tgz:
-    resolution: {integrity: sha512-EY7iywNr4GOTAKZBpqp9Amrlq18sYO3qOlslVLiG7juW/RgShBVOtlsOqmL9WGU0doTa7PqxX4UODzwJ7C9tOQ==, tarball: file:../docbook-package-ui/docbook-ui-package-0.1.0.tgz}
+    resolution: {integrity: sha512-J+cAxc3VCmY8LmT2jAUp/ImMU5Yy/cWhu5P2W9GYEF0fvx4qgkGT/gBTPLdwgitJCREGXbsWiD0bL6z6tWslWw==, tarball: file:../docbook-package-ui/docbook-ui-package-0.1.0.tgz}
     version: 0.1.0
 
   doctrine@2.1.0:
