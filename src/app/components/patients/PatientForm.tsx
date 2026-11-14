@@ -3,8 +3,7 @@
 import React, { useState, useMemo } from "react";
 import { toast } from "sonner";
 import { User, Mail } from "lucide-react";
-import { Input } from "@/app/components/ui/Input";
-import { Button } from "docbook-ui-package";
+import { Input, Button } from "docbook-ui-package";
 import { OptionSelector } from "@/app/components/ui/OptionSelector";
 import { DatePicker } from "@/app/components/ui/DatePicker";
 import { useCreatePatient, useUpdatePatient } from "@/lib/api/patients";
@@ -56,7 +55,7 @@ export function PatientForm({
   );
   const [relationship, setRelationship] = useState<RelationshipOption>(
     (initialData?.relationship?.toLowerCase() as RelationshipOption) ||
-      (hasExistingProfiles ? "spouse" : "self")
+    (hasExistingProfiles ? "spouse" : "self")
   );
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -141,8 +140,8 @@ export function PatientForm({
         err instanceof Error
           ? err.message
           : isEditing
-          ? "Failed to update patient profile"
-          : "Failed to create patient profile";
+            ? "Failed to update patient profile"
+            : "Failed to create patient profile";
       toast.error(message);
     } finally {
       setIsSubmitting(false);
