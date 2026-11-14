@@ -1375,7 +1375,7 @@ packages:
     engines: {node: '>=8'}
 
   docbook-ui-package@file:../docbook-package-ui/docbook-ui-package-0.1.0.tgz:
-    resolution: {integrity: sha512-J+cAxc3VCmY8LmT2jAUp/ImMU5Yy/cWhu5P2W9GYEF0fvx4qgkGT/gBTPLdwgitJCREGXbsWiD0bL6z6tWslWw==, tarball: file:../docbook-package-ui/docbook-ui-package-0.1.0.tgz}
+    resolution: {integrity: sha512-DONo5TWgbnD1/0G4rPcCKL/4XFmWKuB3O3scpjQXgGu0RyPvHuz5P7Wu5GOmqVgP7FvgRBhkcDH8qioWuv/INw==, tarball: file:../docbook-package-ui/docbook-ui-package-0.1.0.tgz}
     version: 0.1.0
 
   doctrine@2.1.0:
@@ -1918,6 +1918,9 @@ packages:
 
   libphonenumber-js@1.13.15:
     resolution: {integrity: sha512-AHdhEQeDFEJ4GKDAQ9AwxChy+v2kUILUB3TGQRpkXMkWePjXTU/WQEzWVQoIx/Gz8fE73Wr5SEuZCy2vk8jrMQ==}
+
+  libphonenumber-js@1.13.16:
+    resolution: {integrity: sha512-tIOCM9yx2Go6d5/ZANe0K+G4AZek1Ymx81HxQpf19Sri4zMP95eQbKdnUGHAvFQ4nx0PeLhFqvAfisTADXj3tQ==}
 
   lightningcss-android-arm64@1.32.0:
     resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
@@ -3605,6 +3608,8 @@ snapshots:
 
   docbook-ui-package@file:../docbook-package-ui/docbook-ui-package-0.1.0.tgz(@types/react@19.3.0):
     dependencies:
+      flag-icons: 7.6.0
+      libphonenumber-js: 1.13.16
       lucide-react: 1.61.0(@types/react@19.3.0)(react@19.3.0)
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -4309,6 +4314,8 @@ snapshots:
       type-check: 0.4.0
 
   libphonenumber-js@1.13.15: {}
+
+  libphonenumber-js@1.13.16: {}
 
   lightningcss-android-arm64@1.32.0:
     optional: true

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import type { CountryCode } from "libphonenumber-js";
-import { validateCellularNumber } from "@/lib/phoneUtils";
+import { validateCellularNumber } from "docbook-ui-package";
 
 /**
  * Validates cellular/mobile number across all supported countries.
